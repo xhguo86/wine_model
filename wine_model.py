@@ -9,9 +9,9 @@ print(d['DESCR'])
 X = pd.DataFrame(d['data'], columns=d['feature_names'])
 y = d['target']  # cultivator
 
-def train_model():
+def train_model(X, y):
     # create a linear regression model
     model = LogisticRegression()
     model.fit(X, y)
+    return model
 
-train_model()
